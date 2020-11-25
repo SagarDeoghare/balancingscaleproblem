@@ -91,6 +91,10 @@ int balanceScales(map<string, vector<string>>::iterator &rootNode) {
         diffenceOfScale = rightScale - leftScale;
         rootNode->second[1] = "0"; // left
         rootNode->second[0] = to_string(diffenceOfScale); //right
+    } else {
+        // if both are same
+        rootNode->second[1] = "0"; // left
+        rootNode->second[0] = "0"; // right
     }
     
     // Adding one as ever root has its own 1 scale
