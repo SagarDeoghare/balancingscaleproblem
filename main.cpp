@@ -22,6 +22,9 @@ map<string, vector<string>> readNodeScalesFromSystem() {
     string strScaleInput;
     map<string, vector<string>> mapNodeAndScale;
     while (getline (inFile, strScaleInput)) {
+        if(strScaleInput[0] == '#') {
+            continue;
+        }
         string token = "";
         string key = "";
         istringstream tokenStream(strScaleInput);
